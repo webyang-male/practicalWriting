@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*--------------学生答题测试---------------*/
+.test_content_list{margin-left:20px; list-style-type:decimal;}
+.test_content_list li{margin-bottom:10px;}
+/*.course_catalogue_nav{*margin-left:-310px; padding:1px; border:1px solid #C5C9CB; position:fixed; top:0;}*/
+.test_catalogue_content{margin-left:310px;background-color:#fff; border:1px solid #C5C9CB;}
+.topline{width:790px; margin-left:310px; *margin-left:0; padding:10px 0 5px 0; background-color:#F4F4F4; position:fixed; top:0;}
+.cff{color:#FFFFFF;}
+.c6d{color:#6e7d99;}
+.cf6{color:#FFC861;}
+.c6c{color:#658ECE;}
+.cf5{color:#FF5353;}
+.c23{color:#2EAD3C;}
+.test_bwhbtn{background-color:#fff;border:1px solid #157EFB;color:#157EFB;}
+.bg1e{background-color:#157EFB;}
+.mr18{margin-right:18px;}.ml-10{margin-left:-10px;}.mt-15{margin-top:-15px;}.mt-20{margin-top:-20px;}.ml30{margin-left:30px;}
+.p30{padding:30px;}.pb300{padding-bottom:300px;}
+.pl4{padding-left:4px;}
+.cricle_dot{display:inline-block;height:10px;font-size:20px;line-height:10px;}
+.mark_blue{background-color:#668ECC; padding:0 1px; border:1px solid #668ECC;color:#fff;font-size:14px;}
+.circle_wh,.circle_blue,.circle_yellow,.circle_green,.circle_red,.circle_blue_show,.circle_green_show,.circle_red_show{display:inline-block; width:28px;line-height:28px;font-size:16px;text-align:center;}
+.circle_wh,.circle_blue,.circle_yellow,.circle_blue_show,.circle_green,.circle_red,.circle_green_show,.circle_red_show{background-repeat:no-repeat;background-image:url(../img/test/test_circle.png);}
+.circle_green,.circle_green_show,.circle_red,.circle_red_show,.circle_blue,.circle_blue_show{color:#fff;}
+.circle_wh{background-position:0 0; color:#555;}
+.circle_blue,.circle_blue_show{background-position:-56px 0;}
+.circle_yellow{background-position:-84px 0;}
+.circle_red,.circle_red_show{background-position:-112px 0;}
+.circle_green,.circle_green_show{background-position:-140px 0;}
+.answer_radio{display:inline-block;width:18px; height:18px;background-repeat:no-repeat;}
+.test_pass_box{width:470px;height:133px;border:1px solid #157EFB;}
+.test_arrow{width:40px;height:20px;padding:1px 3px 3px;background-repeat:no-repeat;background-image:url(../img/test/test_arrow.png);font-size:14px;color:#fff;}
+.test_tips_right,.test_tips_wrong{display:inline-block;width:20px; height:20px;background-repeat:no-repeat;background-image:url(../img/test/test_tips.png);}
+.test_tips_right{background-position:0 0;}
+.test_tips_wrong{background-position:-22px 0;}
+.test_tips_blank{display:inline-block;width:20px; height:20px;background-repeat:no-repeat;}
+.bar{width:365px;background-color:#EBEBEB;padding:3px;}
+.greenbar,.yellowbar{display:block;padding:3px;}
+.greenbar{background-color:#4ABA3A;}
+.yellowbar{background-color:#F6B126;}
+.test_tips{width:30%;padding:5px 5px;background-color:#FFF09E;color:#999;}
+.test_question_list{background-color: #FDFBF7;padding-top: 10px;padding-bottom: 10px;} 
+.test_question_div{padding-bottom: 20px}
+
+/*-----------查看测验统计--------------*/
+.p45{padding:45px;}
+.test_result_box{width:448px; padding:25px 30px; border:1px solid #157EFB; color:#999; font-size:14px;}
+.test_total_box{padding:20px 50px; background-color:#DEFFE2;}
+.statist_stu_table{width:100%; color:#000; font-weight:bold;}
+.statist_stu_table td{padding:5px 10px;}
+.statist_stu_table .bgbe:hover{background-color:#BFE7C4;}
+.statist_stu_table .list_detail{line-height:16px; background-color:#fff; visibility:hidden;}
+.statist_stu_table tr:hover .list_detail{visibility:visible;}
+.exercise_detail_box{padding:5px 3px 10px 15px; border:1px solid #ccc; background-color:#fff;}

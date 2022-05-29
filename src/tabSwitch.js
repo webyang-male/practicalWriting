@@ -1,0 +1,10 @@
+var $tabSwitch=function(elements,options){var defaults={eventType:"click",classAdd:"",classRemove:"",property:"position",targetAttr:"rel",timeDelay:100,timePlay:0,switchCall:$empty};var pms=$extend(defaults,options||{}),length,timerDelay,timerPlay,timerPlayTrigger,numDelayTime=pms.timeDelay.toInt(),numPlayTime=pms.timePlay.toInt();pms.elementCache=null;pms.indexCache=-1;var funSwitch=function(ele,pmsIndex){var cache=pms.elementCache,eleOld,eleNew;if(pms.eventType==="hover"){if($isNum(pmsIndex)){pms.indexCache=pmsIndex;}else{if(numPlayTime>0){pms.indexCache=(pms.indexCache===length-1)?0:pms.indexCache+1;timerPlay=funSwitch.delay(numPlayTime);}}}
+ele=ele||elements[pms.indexCache];if($isEle(ele)){ele.swapClass(pms.classRemove,pms.classAdd);if(eleNew=$(ele.attr(pms.targetAttr))){if(pms.property==="position"){eleNew.into();}else if(pms.property==="display"){eleNew.show();}}
+pms.elementCache=ele;}else{return;}
+if($isEle(cache)&&cache!==ele){cache.swapClass(pms.classAdd,pms.classRemove);if(eleOld=$(cache.attr(pms.targetAttr))){if(pms.property==="position"){eleOld.out();}else if(pms.property==="display"){eleOld.hide();}}}
+if($isFun(pms.switchCall)){pms.switchCall.call(ele,eleNew,cache,eleOld);}};if($isArr(elements)&&(length=elements.length)&&length>0){if(!pms.classAdd){pms.elementCache=elements[0];pms.indexCache=0;}
+elements.each(function(term,index){if(pms.classAdd&&term.hasClass(pms.classAdd)){pms.elementCache=term;pms.indexCache=index;}
+switch(pms.eventType){case"click":{term.addEvent("click",function(){if(!this.hasClass(pms.classAdd)){funSwitch(this);}
+if(this.get("tag")==="a"){return false;}});break;}
+case"hover":{term.addEvents({mouseenter:function(){if(numPlayTime>0){$clear(timerPlayTrigger);$clear(timerPlay);}
+if(!this.hasClass(pms.classAdd)){if(numDelayTime>0){timerDelay=funSwitch.pass([this,index]).delay(numDelayTime);}else{pms.indexCache=index;funSwitch(this);}}},mouseleave:function(){$clear(timerDelay);if(numPlayTime>0){timerPlayTrigger=funSwitch.delay(numPlayTime);}}});}}});if($chk(numPlayTime)&&pms.eventType==="hover"){timerPlayTrigger=funSwitch.delay(numPlayTime);}}};
